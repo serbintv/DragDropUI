@@ -26,7 +26,7 @@
 
 import UIKit
 
-public class DDImageView: UIImageView, DDProtocol {
+open public class DDImageView: UIImageView, DDProtocol {
 
     public var draggedPoint: CGPoint = CGPoint.zero
     public var ddDelegate: DDViewDelegate?
