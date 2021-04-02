@@ -40,10 +40,12 @@ public protocol DDProtocol: class {
 
     var view: UIView { get }
     var draggedPoint: CGPoint { get set }
-
+    var scale: CGFloat? { get set }
+    
     func registerGesture() -> Void
     func removeGesture() -> Void
     func didPress(pressGesture: UILongPressGestureRecognizer) -> Void
     func handlePan(panGesture: UIPanGestureRecognizer) -> Void
+    func setScale(_ scale: CGFloat)
 
 }

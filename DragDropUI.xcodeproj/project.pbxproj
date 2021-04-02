@@ -25,6 +25,7 @@
 		1C0BD6A61F46E331001A4201 /* DDImageViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */; };
 		1C0BD6A71F46E331001A4201 /* DDTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4030BDE1E41305C007502FC /* DDTextFieldTests.swift */; };
 		C9162CAC2A06337E32276EFE /* Pods_DragDropUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA26522989FF787CCFA3AF5F /* Pods_DragDropUITests.framework */; };
+		CCD0E5D12617114A0041E62E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD0E5D02617114A0041E62E /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A4F58F641DF0BC2B00BCAB13 /* DDImageViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDImageViewTests.swift; sourceTree = "<group>"; };
 		A4F58F661DF0BCCA00BCAB13 /* DD+ViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DD+ViewTests.swift"; sourceTree = "<group>"; };
 		BA26522989FF787CCFA3AF5F /* Pods_DragDropUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragDropUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD0E5D02617114A0041E62E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DA73146253FAA0DF4B5F5E41 /* Pods-DragDropUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E437CD21FEFB9364CE4BAA59 /* Pods-DragDropUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragDropUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DragDropUITests/Pods-DragDropUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 				1C0BD65C1F46E0D4001A4201 /* DDTableViewCell.swift */,
 				1C0BD65D1F46E0D4001A4201 /* DDTextField.swift */,
 				1C0BD65E1F46E0D4001A4201 /* DDView.swift */,
+				CCD0E5D02617114A0041E62E /* UIView+Extension.swift */,
 			);
 			path = DragDropUI;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD0E5D12617114A0041E62E /* UIView+Extension.swift in Sources */,
 				1C0BD65F1F46E0D4001A4201 /* DD+View.swift in Sources */,
 				1C0BD6651F46E0D4001A4201 /* DDProtocol.swift in Sources */,
 				1C0BD6601F46E0D4001A4201 /* DDButton.swift in Sources */,

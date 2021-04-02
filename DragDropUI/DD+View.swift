@@ -30,7 +30,15 @@ public extension DDProtocol where Self: UIView {
 
     var view: UIView { get { return self } }
     var parentView: UIView? { get { return self.view.superview } }
-
+    var scale: CGFloat? {
+        get {
+            return self.scale ?? 0
+        }
+        set {
+            setScale(scale ?? 0.00)
+        }
+    }
+    
     func registerGesture() {
         let panGesture = UIPanGestureRecognizer()
         panGesture.handler = { gesture in
@@ -62,10 +70,18 @@ public extension DDProtocol where Self: UIView {
     func didPress(pressGesture: UILongPressGestureRecognizer) {
         switch pressGesture.state {
         case .began:
+            
+            UIView.animate(withDuration: 0.5) {
+                self.transform = CGAffineTransform(scaleX: self.scale ?? 0, y: self.scale ?? 0)
+            }
+            
             self.draggedPoint = self.view.center
             self.parentView?.bringSubviewToFront(self.view)
             break
         case .cancelled, .ended, .failed:
+            UIView.animate(withDuration: 0.5) {
+                self.transform = CGAffineTransform.identity
+            }
             if self.ddDelegate != nil {
                 self.ddDelegate!.viewWasDropped(view: self, droppedPoint: self.draggedPoint)
             }
@@ -81,5 +97,9 @@ public extension DDProtocol where Self: UIView {
         if self.ddDelegate != nil {
             self.ddDelegate!.viewWasDragged(view: self, draggedPoint: self.view.center)
         }
+    }
+    
+    func setScale(_ scale: CGFloat) {
+        self.scale = scale
     }
 }
